@@ -1,0 +1,53 @@
+<!doctype>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <canvas id="myChart"></canvas>
+    <small>data taken from howmuch.net</small>
+    <h1 class="mt-4">Learn to save your money!</h1>
+  </div>
+
+  <script>
+  let myChart = document.getElementById('myChart').getContext('2d');
+
+  let savingsRateChart = new Chart(myChart, {
+    // type of graph
+    type:'horizontalBar',
+    data:{
+      labels:['Japan','Spain','Canada','USA','Germany','Sweden','Switzerland'],
+      datasets:[{
+        label:'Household Savings Rate By Country',
+        data:[
+          2.4,
+          2.9,
+          4.1,
+          4.9,
+          9.6,
+          15.8,
+          17.8
+        ],
+        backgroundColor:[
+          'rgb(221, 15, 29',
+          'rgb(140, 25, 44)',
+          'rgb(41, 142, 58)',
+          'rgb(200, 42, 58)',
+          'rgb(41, 12, 58)',
+          'rgb(41, 142, 128)',
+          'rgb(91, 12, 58)'
+        ],
+        borderWidth:'1',
+        borderColor:'white',
+        hoverBorderWidth:'2',
+        hoverBorderColor:'black'
+      }]
+    },
+    options:{}
+  });
+  </script>
+</body>
+</html>
